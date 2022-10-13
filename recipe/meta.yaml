@@ -47,10 +47,11 @@ test:
 
 about:
   home: http://www.staff.ncl.ac.uk/stephen.juggins/
-  license: GPL-2
+  license: GPL-2.0-only
   summary: Constrained clustering, transfer functions, and other methods for analysing Quaternary science data.
   license_family: GPL2
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:

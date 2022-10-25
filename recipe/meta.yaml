@@ -1,4 +1,4 @@
-{% set version = "0.9-26" %}
+{% set version = "1.0-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rioja_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rioja/rioja_{{ version }}.tar.gz
-  sha256: e6a46cf299bf029b23b9a989eb6598f4952a8645c8240743fe53593474344e09
+  sha256: 54f468c1309138aea2e87adad58b2390133f4d026e8ac03beab94dcc7e369ca6
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -32,12 +32,20 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-dplyr
+    - r-forcats
     - r-mgcv
+    - r-sjmisc
+    - r-stringr
     - r-vegan
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - r-dplyr
+    - r-forcats
     - r-mgcv
+    - r-sjmisc
+    - r-stringr
     - r-vegan
 
 test:
@@ -47,8 +55,9 @@ test:
 
 about:
   home: http://www.staff.ncl.ac.uk/stephen.juggins/
+  dev_url: https://github.com/nsj3/rioja
   license: GPL-2.0-only
-  summary: Constrained clustering, transfer functions, and other methods for analysing Quaternary science data.
+  summary: Stratigraphic diagrams, constrained clustering, transfer functions, and other methods for analysing Quaternary science data.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
@@ -56,20 +65,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-
-# Package: rioja
-# Type: Package
-# Title: Analysis of Quaternary Science Data
-# Version: 0.9-21
-# Date: 2019-04-23
-# Author: Steve Juggins
-# Maintainer: Steve Juggins <Stephen.Juggins@ncl.ac.uk>
-# Imports: vegan, mgcv, grDevices
-# Suggests: maptools, foreach
-# Description: Constrained clustering, transfer functions, and other methods for analysing Quaternary science data.
-# License: GPL-2
-# URL: http://www.staff.ncl.ac.uk/stephen.juggins/
-# NeedsCompilation: yes
-# Repository: CRAN
-# Packaged: 2019-04-23 17:53:25 UTC; nsj3
-# Date/Publication: 2019-04-23 21:22:02

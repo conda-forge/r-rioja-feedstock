@@ -1,4 +1,4 @@
-{% set version = "0.9-26" %}
+{% set version = "1.0-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rioja_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rioja/rioja_{{ version }}.tar.gz
-  sha256: e6a46cf299bf029b23b9a989eb6598f4952a8645c8240743fe53593474344e09
+  sha256: 54f468c1309138aea2e87adad58b2390133f4d026e8ac03beab94dcc7e369ca6
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/

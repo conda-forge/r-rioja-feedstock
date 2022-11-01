@@ -7,7 +7,9 @@ Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rioja-feedstock/blob/main/LICENSE.txt)
 
-Summary: Constrained clustering, transfer functions, and other methods for analysing Quaternary science data.
+Summary: Stratigraphic diagrams, constrained clustering, transfer functions, and other methods for analysing Quaternary science data.
+
+Development: https://github.com/nsj3/rioja
 
 Current build status
 ====================

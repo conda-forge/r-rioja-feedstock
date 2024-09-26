@@ -1,4 +1,4 @@
-{% set version = "1.0-6" %}
+{% set version = "1.0-7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rioja_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rioja/rioja_{{ version }}.tar.gz
-  sha256: a3093b5b3478a1af8d6bd4e02ad5ecc14f67b1cdc0ccdca5cdb7c0381a383709
+  sha256: 134ce11661007f15ae22e36c4070ea35c565d35c3c75007f5f6760f4a008bcf6
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
